@@ -1,19 +1,16 @@
 <div class="slider">
-	<div class="slider__arrow"></div>
+	<div class="slider__arrow" (click)="previousSlide()"></div>
 
 	<div class="slider_slides">
-		<div class="slide">
-			<img class="slide__image" src="/assets/gfx/slider-image.png">
-			<a class="slide__button outline-button">Learn more about great deals</a>
+		<div *ngFor="let slide of slides; let key = index" class="slide" [hidden]="key !== active">
+			<img class="slide__image" [src]="slide.image">
+			<a class="slide__button outline-button">{{ slide.actionText }}</a>
 		</div>
 	</div>
 
 	<div class="slider__indicator indicator">
-		<div (click)="indicatorClicked($event)" class="indicator__pin"></div>
-		<div (click)="indicatorClicked($event)" class="indicator__pin indicator__pin--active"></div>
-		<div (click)="indicatorClicked($event)" class="indicator__pin"></div>
-		<div (click)="indicatorClicked($event)" class="indicator__pin"></div>
+		<div *ngFor="let slide of slides; let key = index" (click)="changeSlide(key)" class="indicator__pin" [ngClass]="{'indicator__pin--active': key === active}"></div>
 	</div>
 
-	<div class="slider__arrow slider__arrow--right"></div>
+	<div class="slider__arrow slider__arrow--right" (click)="nextSlide()"></div>
 </div>

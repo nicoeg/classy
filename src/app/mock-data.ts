@@ -1,4 +1,5 @@
 import { Recipe } from "./recipe"
+import { Slide } from './classes/slide'
 
 export const RecipeData: Recipe[] = [
    {
@@ -265,4 +266,17 @@ export const RecipeData: Recipe[] = [
       "publisher_url":"http://whatsgabycooking.com",
       "title":"Parmesan Roasted Potatoes"
    }
+]
+
+export const slideData: Slide[] = [
+   {
+      image: '/assets/gfx/slider-image.png',
+      actionUrl: '',
+      actionText: 'Learn more about great deals'
+   },
+   {
+      image: '/assets/gfx/slider-image2.png',
+      actionUrl: '',
+      actionText: ''
+   },
 ]

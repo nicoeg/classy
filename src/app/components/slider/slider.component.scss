@@ -1,0 +1,70 @@
+@import '~assets/scss/variables';
+
+.slider {
+	position: relative;
+	background: #bbb;
+
+	&__arrow {
+		position: absolute;
+		width: 25px;
+		height: 55px;
+		top: 0;
+		bottom: 0;
+		left: 20px;
+		margin: auto;
+		background: url('/assets/gfx/arrow.png');
+		cursor: pointer;
+
+		&--right {
+			left: auto;
+			right: 20px;
+			transform: rotate(180deg);
+		}
+	}
+
+	&__indicator {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		bottom: 40px;
+	}
+}
+
+.slide {
+	&__image {
+		width: 100%;
+	}
+
+	&__button { /* Specific for first slide but ¯\_(ツ)_/¯ */
+		position: absolute;
+		bottom: 10%;
+		right: 8%;
+	}
+}
+
+.indicator {
+	height: 30px; /* Set height to avoid weird transition */
+
+	&__pin {
+		width: 3px;
+		height: 20px;
+		margin: 0 5px;
+		background: #fff;
+		cursor: pointer;
+		transition: height .2s;
+
+		&--active {
+			height: 30px;
+			background: $turqoise;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.slide__button {
+		font-size: 10px;
+		padding: 10px 20px;
+	}
+}

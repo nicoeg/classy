@@ -11,11 +11,4 @@ export class FrontpageComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  indicatorClicked(e) {
-  	const indi = document.getElementsByClassName('indicator__pin--active')[0]
-
-  	indi.classList.remove('indicator__pin--active')
-  	e.target.classList.add('indicator__pin--active')
-  }
 }

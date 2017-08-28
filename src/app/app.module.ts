@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './pages/product/product.component';
 import { SiteHeaderComponent } from './components/site-header/site-header.component';
 import { FrontpageComponent } from './pages/frontpage/frontpage.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FrontpageComponent } from './pages/frontpage/frontpage.component';
     ProductComponent,
     SiteHeaderComponent,
     FrontpageComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,

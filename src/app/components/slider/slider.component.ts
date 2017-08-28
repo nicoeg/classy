@@ -8,25 +8,35 @@ import { Slide } from '../../classes/slide'
 })
 export class SliderComponent implements OnInit {
 	active = 0
+	amount = 0
 
 	@Input() slides: Slide[]
 
 	constructor() { }
 
 	ngOnInit() {
+		setInterval(() => {
+			this.amount += 2
+
+			if (this.amount >= 100) {
+				this.nextSlide()
+				this.amount = 0
+			}
+		}, 100)
 
 	}
 
 	changeSlide(slideIndex) {
 		this.active = slideIndex
+		this.amount = 0
 	}
 
 	previousSlide() {
-		this.active = this.active === 0 ? this.slides.length - 1 : this.active - 1
+		this.changeSlide(this.active === 0 ? this.slides.length - 1 : this.active - 1)
 	}
 
 	nextSlide() {
-		this.active = this.active === this.slides.length - 1 ? 0 : this.active + 1
+		this.changeSlide(this.active === this.slides.length - 1 ? 0 : this.active + 1)
 	}
 
 }

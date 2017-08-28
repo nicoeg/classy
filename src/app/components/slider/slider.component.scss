@@ -2,7 +2,6 @@
 
 .slider {
 	position: relative;
-	background: #bbb;
 
 	&__arrow {
 		position: absolute;
@@ -60,6 +59,23 @@
 			background: $turqoise;
 		}
 	}
+}
+
+.timer {
+    height: 10px;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 3;
+
+    &__indicator {
+    	position: absolute;
+    	width: 50%;
+    	height: 100%;
+		background: #ff4d5f;
+		transition: width .1s linear;
+    }
 }
 
 @media (max-width: 1000px) {

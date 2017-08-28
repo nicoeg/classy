@@ -12,5 +12,9 @@
 		<div *ngFor="let slide of slides; let key = index" (click)="changeSlide(key)" class="indicator__pin" [ngClass]="{'indicator__pin--active': key === active}"></div>
 	</div>
 
+	<div class="timer">
+		<div class="timer__indicator" [ngStyle]="{'width': amount + '%'}"></div>
+	</div>
+
 	<div class="slider__arrow slider__arrow--right" (click)="nextSlide()"></div>
 </div>

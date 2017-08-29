@@ -1,0 +1,12 @@
+<div *ngIf="!signedUp" class="newsletter-signup">
+	<img class="newsletter-signup__icon" src="/assets/gfx/newsletter.png">
+	<h1 class="newsletter-signup__title">Get our newsletter</h1>
+	<h2 class="newsletter-signup__subtitle">join our maillist to receive special discounts</h2>
+	<input class="newsletter-signup__input" placeholder="Enter your email" [ngClass]="{'newsletter-signup__input--error': error}" [(ngModel)]="email" (keyup)="error = false">
+	<span *ngIf="error" class="newsletter-signup__error">Invalid email</span>
+	<span class="newsletter-signup__button outline-button outline-button--dark" (click)="subscribeClicked()">Subscribe</span>
+</div>
+
+<div *ngIf="signedUp" class="newsletter-signup">
+	<h1 *ngIf="signedUp">You're now signed up!</h1>
+</div>

@@ -1,0 +1,72 @@
+@import '~assets/scss/variables';
+
+.newsletter-signup {
+	width: 440px;
+	height: 100%;
+	border: 2px solid #dcdcdc;
+	margin: 0 15px;
+	box-shadow: 0px 7px 8px 0px #d4d4d4;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0 35px;
+
+	&__icon {
+		margin-bottom: 25px;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		color: $dark-grey;
+		font-weight: 700;
+		margin-bottom: 5px;
+	}
+
+	&__subtitle {
+		text-transform: uppercase;
+		color: $light-grey;
+		font-size: 18px;
+		font-weight: 300;
+		margin-bottom: 25px;
+	}
+
+	&__input {
+	    border: none;
+	    border-bottom: 1px solid $dark-grey;
+	    width: 100%;
+	    text-align: center;
+	    color: $dark-grey;
+	    font-size: 17px;
+	    outline: none;
+	    padding: 5px 0;
+
+	    &--error {
+	    	border-bottom-color: $error-color;
+	    }
+	}
+
+	&__input::-webkit-input-placeholder {
+	    text-transform: uppercase;
+	    color: $dark-grey;
+	}
+
+	&__error {
+		color: $error-color;
+		margin-top: 5px;
+	}
+
+	&__button {
+		margin-top: 20px;
+		width: 100%;
+		padding: 15px 0;
+	}
+}
+
+@media (max-width: 1300px) {
+	.newsletter-signup {
+		width: 100%;
+		margin: 0;
+	}
+}

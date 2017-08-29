@@ -5,5 +5,5 @@ import { Component, OnInit } from '@angular/core';
 	templateUrl: './site-header.component.html',
 	styleUrls: ['./site-header.component.scss']
 })
-export class SiteHeaderComponent{
+export class SiteHeaderComponent {
 }

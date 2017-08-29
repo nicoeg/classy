@@ -4,4 +4,9 @@
 	color: #fff;
 	text-transform: uppercase;
 	cursor: pointer;
+
+	&--dark {
+		color: #333333;
+		border-color: #333333;
+	}
 }

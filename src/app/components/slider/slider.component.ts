@@ -16,7 +16,7 @@ export class SliderComponent implements OnInit {
 
 	ngOnInit() {
 		setInterval(() => {
-			this.amount += 2
+			this.amount += 1
 
 			if (this.amount >= 100) {
 				this.nextSlide()

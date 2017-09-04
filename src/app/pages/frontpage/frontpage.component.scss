@@ -45,6 +45,52 @@
 	}
 }
 
+.brands {
+	background: #f6f6f6;
+	padding: 55px 10px 35px 10px;
+
+	&__title {
+		position: relative;
+		font-size: 20px;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		color: $dark-grey;
+
+		&::after, &::before {
+			content: '';
+		    position: absolute;
+	        max-width: 100px;
+    		width: 10%;
+		    height: 1px;
+		    background: $dark-grey;
+		    top: 0;
+		    bottom: 0;
+		    margin: auto 10px;
+		}
+
+		&::before {
+			transform: rotate(180deg);
+    		transform-origin: left;
+    		margin-left: -10px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		img {
+			max-width: 200px;
+			margin: 20px;
+		}
+	}
+}
+
 @media (max-width: 1300px) {
 	.newsletter-section {
 		flex-wrap: wrap;

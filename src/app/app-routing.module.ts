@@ -1,15 +1,23 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core'
+import { Routes, RouterModule } from '@angular/router'
 
-import { ProductComponent } from "./pages/product/product.component";
-import { FrontpageComponent } from "./pages/frontpage/frontpage.component";
+import { FrontpageComponent } from './pages/frontpage/frontpage.component'
+import { NewCollectionComponent } from './pages/new-collection/new-collection.component'
+import { ProductpageComponent } from './pages/productpage/productpage.component'
 
 const routes: Routes = [
   {
     path: 'product',
-    component: ProductComponent,
+    component: ProductpageComponent,
     data: {
       transparentHeader: 'true'
+    }
+  },
+  {
+    path: 'new-collection',
+    component: NewCollectionComponent,
+    data: {
+      transparentHeader: true
     }
   },
   {

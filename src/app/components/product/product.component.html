@@ -1,0 +1,29 @@
+<div class="product">
+	<div *ngIf="product.sale" class="product__sale-badge">Sale</div>
+
+	<div class="product__image">
+		<img [src]="product.thumbnail">
+
+		<div class="product__actions">
+			<div class="round-button">
+				<i class="round-button__icon fa fa-eye" aria-hidden="true"></i>
+				<span class="round-button__text">Quick View</span>
+			</div>
+
+			<div class="round-button">
+				<i class="round-button__icon fa fa-heart" aria-hidden="true"></i>
+				<span class="round-button__text">Save</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="product__name">{{ product.brand }} {{ product.name }}</div>
+
+	<div class="product__bottom">
+		<div class="product__price">${{ product.price }}</div>
+		<div class="product__button outline-button outline-button--dark">
+			<i class="outline-button__icon fa fa-shopping-bag"></i>
+			Add to bag
+		</div>
+	</div>
+</div>

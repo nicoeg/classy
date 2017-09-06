@@ -1,12 +1,44 @@
+@import '~assets/scss/variables';
+
 .outline-button {
 	padding: 25px 40px;
 	border: 1px solid #fff;
 	color: #fff;
 	text-transform: uppercase;
 	cursor: pointer;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+    	color: #58595c;
+    	margin-right: 10px;
+    }
 
 	&--dark {
-		color: #333333;
-		border-color: #333333;
+		color: $dark-grey;
+		border-color: $dark-grey;
+	}
+}
+
+.round-button {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+	&__icon {
+		font-size: 15px;
+		padding: 20px;
+		border-radius: 100%;
+		background: $turqoise;
+		color: #fff;
+	}
+
+	&__text {
+		margin-top: 10px;
+		font-weight: 300;
+		font-size: 13px;
+		text-align: center;
 	}
 }

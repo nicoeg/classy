@@ -1,0 +1,84 @@
+@import '~assets/scss/variables';
+
+.product {
+	position: relative;
+	margin-bottom: 20px;
+
+	&__sale-badge {
+		position: absolute;
+		background: $turqoise;
+		color: white;
+		padding: 10px 20px;
+		text-transform: uppercase;
+		z-index: 1;
+	}
+
+	&__image {
+		position: relative;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+		}
+
+		&:hover .product__actions {
+			bottom: 0;
+		}
+	}
+
+	&__actions {
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.9);
+		padding: 25px 35px;
+		bottom: -120px;
+		transition: bottom .3s;
+	}
+
+	&__name {
+		padding: 10px 0;
+		text-align: center;
+		color: $dark-grey;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 10px;
+	}
+
+	&__price {
+		font-weight: 600;
+		font-size: 20px;
+		color: $dark-grey;
+	}
+
+	&__button {
+		font-size: 14px;
+		padding: 5px 20px;
+	}
+}
+
+@media (max-width: 500px) {
+	.product {
+		&__sale-badge {
+			font-size: 12px;
+			padding: 10px 15px;
+		}
+
+		&__actions {
+			padding: 15px;
+		}
+
+		&__bottom {
+			flex-direction: column;
+		}
+
+		&__price {
+			margin-bottom: 10px;
+		}
+	}
+}

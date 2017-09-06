@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app-product',
-	templateUrl: './product.component.html',
-	styleUrls: ['./product.component.scss']
+	templateUrl: './productpage.component.html',
+	styleUrls: ['./productpage.component.scss']
 })
-export class ProductComponent {
+export class ProductpageComponent {
 	products = [
 		{ name: 'yo' },
 		{ name: 'ho' }

@@ -41,6 +41,10 @@
 		flex-direction: column;
 		text-align: center;
 		font-size: 30px;
+
+		span {
+			color: #fff;
+		}
 	}
 }
 
@@ -49,31 +53,8 @@
 	padding: 55px 10px 35px 10px;
 
 	&__title {
-		position: relative;
-		font-size: 20px;
 		font-weight: 700;
-		text-align: center;
 		margin-bottom: 15px;
-		text-transform: uppercase;
-		color: $dark-grey;
-
-		&::after, &::before {
-			content: '';
-		    position: absolute;
-	        max-width: 100px;
-    		width: 10%;
-		    height: 1px;
-		    background: $dark-grey;
-		    top: 0;
-		    bottom: 0;
-		    margin: auto 10px;
-		}
-
-		&::before {
-			transform: rotate(180deg);
-    		transform-origin: left;
-    		margin-left: -10px;
-		}
 	}
 
 	&__list {
@@ -121,7 +102,85 @@
     }
 }
 
+.product-nav {
+	display: flex;
+	justify-content: space-between;
+	max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+
+	&__item {
+		position: relative;
+		color: $dark-grey;
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&::after {
+			position: absolute;
+			content: '';
+			transition: width .2s;
+			background: #000;
+			left: 0;
+			right: 0;
+			bottom: -10px;
+			margin: 0 auto;
+			width: 0;
+			cursor: default;
+			height: 3px;
+		}
+
+		&--active::after {
+			width: 50px;
+		}
+	}
+}
+
+.big-promo {
+	display: block;
+	margin-top: 70px;
+	margin-bottom: -6px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.testimonials {
+	background: $turqoise;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 50px 20px;
+
+	&__avatar {
+		border-radius: 100%;
+		padding: 7px;
+		background: lighten($turqoise, 7%);
+	}
+
+	&__name {
+		margin: 20px 0;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	&__text {
+		max-width: 750px;
+		text-align: center;
+		color: #fff;
+		font-style: italic;
+		line-height: 30px;
+	}
+}
+
 @media (max-width: 1200px) {
+	.mobile-space {
+		padding: 0 20px;
+	}
+
 	.newsletter-section {
 		flex-wrap: wrap;
 		padding: 50px 20px;
@@ -138,10 +197,6 @@
 			order: -1;
 			margin-right: 10%;
 		}
-	}
-
-	.promotions {
-		padding: 100px 20px;
 	}
 }
 
@@ -170,5 +225,18 @@
 	    		grid-column: 1;
 	    	}
 	    }
+	}
+
+	.product-nav {
+		flex-direction: column;
+		align-items: center;
+
+		&__item {
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 }

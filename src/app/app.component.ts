@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute }    from '@angular/router';
 
-import { DataService } from './data.service'
-import { Recipe } from './recipe'
+import { DataService } from './services/data.service'
 
 @Component({
   selector: 'app-root',
@@ -11,13 +10,10 @@ import { Recipe } from './recipe'
 })
 export class AppComponent implements OnInit {
   title = 'app'
-  recipes: Recipe[]
 
   constructor(private dataService: DataService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-  	this.recipes = this.dataService.getRecipes()
-
   	console.log(this.route.snapshot.data);
   }
 }

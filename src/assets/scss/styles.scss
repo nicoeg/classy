@@ -1,8 +1,15 @@
+@import '~assets/scss/variables';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  color: $dark-grey;
+}
+
+body {
+	background: #fff;
 }
 
 .bold {
@@ -15,4 +22,30 @@
 	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
+}
+
+.dashed-title {
+	position: relative;
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $dark-grey;
+
+	&::after, &::before {
+		content: '';
+	    position: absolute;
+        max-width: 100px;
+		width: 10%;
+	    height: 1px;
+	    background: $dark-grey;
+	    top: 0;
+	    bottom: 0;
+	    margin: auto 10px;
+	}
+
+	&::before {
+		transform: rotate(180deg);
+		transform-origin: left;
+		margin-left: -10px;
+	}
 }

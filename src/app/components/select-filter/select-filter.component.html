@@ -1,0 +1,13 @@
+<div class="select-filter" [ngClass]="{'select-filter--active': open}" (click)="open = !open">
+	<span class="select-filter__title">
+		<span *ngIf="active === null">{{ title }}</span>
+		<span *ngIf="active !== null">{{ active }}</span>
+
+		<span class="arrow-down"></span>
+	</span>
+
+	<div class="select-filter__options">
+		<span class="select-filter__option" *ngFor="let option of options" (click)="optionClicked(option)">{{ option }}</span>
+		<span class="select-filter__option" (click)="optionClicked(null)">Clear</span>
+	</div>
+</div>

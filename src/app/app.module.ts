@@ -18,6 +18,7 @@ import { NewsletterSignupComponent } from './component/newsletter-signup/newslet
 import { ProductGridComponent } from './components/product-grid/product-grid.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NewCollectionComponent } from './pages/new-collection/new-collection.component';
+import { SelectFilterComponent } from './components/select-filter/select-filter.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NewCollectionComponent } from './pages/new-collection/new-collection.co
     ProductGridComponent,
     FooterComponent,
     NewCollectionComponent,
+    SelectFilterComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,28 @@
 	<img class="banner__image" src="/assets/gfx/slider-image2.png" alt="New collection">
 
 	<div class="banner__button">
-		<a href="#collection" class="outline-button">Browse Collection</a>
+		<a href="/new-collection#collection" class="outline-button">Browse Collection</a>
+	</div>
+</div>
+
+<div id="collection" class="container collection" *ngIf="productsFiltered">
+	<div class="collection__filters">
+		<span class="collection__filter">New collection ({{ currentPage * perPage - perPage + 1 }}-{{ currentPage * perPage }} of {{ productsFiltered.length }})</span>
+
+		<select-filter class="collection__filter" title="Sort by" [options]="['price', 'popular']" (onChanged)="sortChanged($event)"></select-filter>
+
+		<select-filter class="collection__filter" title="Features" [options]="['VR ready', 'wireless']"></select-filter>
+
+		<select-filter class="collection__filter" title="Size" [options]="['12', '13', '14']"></select-filter>
+
+		<select-filter class="collection__filter" title="Color" [options]="['red', 'white', 'blue']"></select-filter>
+
+		<select-filter class="collection__filter" title="Price" [options]="['< 500', '> 500']"></select-filter>
+	</div>
+
+	<product-grid [products]="currentProducts"></product-grid>
+
+	<div class="pages">
+		<div class="pages__number" [ngClass]="{'pages__number--active': page === currentPage}" (click)="currentPage = page" *ngFor="let page of pages">{{ page }}</div>
 	</div>
 </div>

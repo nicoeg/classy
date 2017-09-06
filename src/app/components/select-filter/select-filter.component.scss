@@ -1,0 +1,42 @@
+@import '~assets/scss/variables';
+
+.select-filter {
+	position: relative;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		text-transform: uppercase;
+		font-size: 15px;
+		cursor: pointer;
+
+		.arrow-down {
+			margin-left: 5px;
+		}
+	}
+
+	&__options {
+		position: absolute;
+		left: 0;
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		background: #fff;
+		z-index: 2;
+	}
+
+	&__option {
+		padding: 5px;
+		border-bottom: 1px solid $dark-grey;
+		cursor: pointer;
+		text-transform: capitalize;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	&--active &__options {
+		display: flex;
+	}
+}

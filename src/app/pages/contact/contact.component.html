@@ -1,0 +1,30 @@
+<form class="contact-form" [formGroup]="contactForm" novalidate>
+	<div class="contact-form__input" [ngClass]="hasError('name') ? 'contact-form__input--invalid' : ''">
+		<label>
+			Name
+			<input type="text" formControlName="name" />
+		</label>
+
+		<div class="contact-form__error">Name is invalid</div>
+	</div>
+
+	<div class="contact-form__input" [ngClass]="hasError('email') ? 'contact-form__input--invalid' : ''">
+		<label>
+			Email
+			<input type="text" formControlName="email" />
+		</label>
+
+		<div class="contact-form__error">Email is invalid</div>
+	</div>
+
+	<div class="contact-form__input" [ngClass]="hasError('text') ? 'contact-form__input--invalid' : ''">
+		<label>
+			Body
+			<textarea type="text" formControlName="text"></textarea>
+		</label>
+
+		<div class="contact-form__error">Body is invalid</div>
+	</div>
+
+	<input class="button button--big button--turqoise" value="Submit" [disabled]="contactForm.invalid">
+</form>

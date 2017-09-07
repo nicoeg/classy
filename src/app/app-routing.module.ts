@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
 
 import { FrontpageComponent } from './pages/frontpage/frontpage.component'
+import { ContactComponent } from './pages/contact/contact.component'
 import { NewCollectionComponent } from './pages/new-collection/new-collection.component'
 import { ProductpageComponent } from './pages/productpage/productpage.component'
 
@@ -9,6 +10,10 @@ const routes: Routes = [
   {
     path: 'product/:id',
     component: ProductpageComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
   },
   {
     path: 'new-collection',

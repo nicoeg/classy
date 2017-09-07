@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { DataService } from './services/data.service'
 import { ProductService } from './services/product.service'
@@ -21,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NewCollectionComponent } from './pages/new-collection/new-collection.component';
 import { SelectFilterComponent } from './components/select-filter/select-filter.component';
 import { ShoppingBagComponent } from './components/shopping-bag/shopping-bag.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +37,13 @@ import { ShoppingBagComponent } from './components/shopping-bag/shopping-bag.com
     NewCollectionComponent,
     SelectFilterComponent,
     ShoppingBagComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ DataService, ProductService, ShoppingBagService ],
   bootstrap: [ AppComponent ]

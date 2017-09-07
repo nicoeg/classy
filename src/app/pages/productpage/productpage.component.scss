@@ -1,4 +1,5 @@
 @import '~assets/scss/variables';
+@import '~assets/scss/mixins';
 
 .promo img {
 	width: 100%;
@@ -222,7 +223,7 @@
 	}
 }
 
-@media (max-width: 1200px) {
+@include break(1200) {
 	.product {
 		padding: 0 20px;
 	}
@@ -232,7 +233,7 @@
 	}
 }
 
-@media (max-width: 1000px) {
+@include break(1000) {
 	.product {
 		flex-direction: column;
 		align-items: center;
@@ -250,7 +251,7 @@
 	}
 }
 
-@media (max-width: 900px) {
+@include break(900) {
 	.feature {
 		&__image {
 			display: none;
@@ -262,7 +263,7 @@
 	}
 }
 
-@media (max-width: 500px) {
+@include break(500) {
 	.tabs__tab {
 		padding: 10px 20px;
     	font-size: 12px;

@@ -1,4 +1,5 @@
 @import '~assets/scss/variables';
+@import '~assets/scss/mixins';
 
 .social {
 	padding: 65px 0 25px 0;
@@ -71,13 +72,13 @@
 	}
 }
 
-@media (max-width: 1200px) {
+@include break(1200) {
 	.footer {
 		padding: 70px 20px;
 	}
 }
 
-@media (max-width: 900px) {
+@include break(900) {
 	.footer {
 		&__content {
 			justify-content: center;

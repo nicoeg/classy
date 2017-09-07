@@ -1,4 +1,5 @@
 @import '~assets/scss/variables';
+@import '~assets/scss/mixins';
 
 .newsletter-signup {
 	width: 440px;
@@ -102,7 +103,7 @@
 	}
 }
 
-@media (max-width: 1200px) {
+@include break(1200) {
 	.newsletter-signup:not(.newsletter-signup--fullwidth) {
 		width: 100%;
 		margin: 0;

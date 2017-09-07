@@ -63,7 +63,7 @@
 	}
 }
 
-@media (max-width: 500px) {
+@include break(500) {
 	.product {
 		&__sale-badge {
 			font-size: 12px;

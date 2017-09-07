@@ -120,7 +120,7 @@
 	}
 }
 
-@media (max-width: 500px) {
+@include break(500) {
 	.shopping-bag {
 		padding: 40px 20px;
 	}

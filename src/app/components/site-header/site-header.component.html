@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header" [ngClass]="transparent ? 'site-header--transparent' : ''">
 	<div class="site-header__logo">
 		<a routerLink="/">
 			<img src="/assets/gfx/logo.png" alt="">
@@ -7,18 +7,18 @@
 
 	<nav class="site-header__nav">
 		<a class="nav-link" href="#">
-			<img class="nav-link__icon" src="/assets/gfx/icons/login.png" alt="Login">
+			<i class="fa fa-user-o nav-link__icon"></i>
 			<span class="nav-link__text">Login</span>
 		</a>
 		<a class="nav-link" (click)="openShoppingBag($event)">
-			<img class="nav-link__icon" src="/assets/gfx/icons/shoppingbag.png" alt="Shopping bag">
+			<i class="fa fa-shopping-bag nav-link__icon"></i>
 			<span class="nav-link__text">{{ shoppingBagService.items.length }} items</span>
 		</a>
 		<a class="nav-link" href="#">
-			<img class="nav-link__icon" src="/assets/gfx/icons/search.png" alt="Search">
+			<i class="fa fa-search nav-link__icon"></i>
 		</a>
 		<a class="nav-link" href="#">
-			<img class="nav-link__icon" src="/assets/gfx/icons/menu.png" alt="menu">
+			<i class="fa fa-bars nav-link__icon"></i>
 		</a>
 	</nav>
 </header>

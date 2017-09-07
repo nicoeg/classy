@@ -16,7 +16,7 @@ export class ShoppingBagComponent implements OnInit {
 		return Math.round(total * 100) / 100
 	}
 
-	constructor(private dataService: DataService, private shoppingBagService: ShoppingBagService) { }
+	constructor(private dataService: DataService, public shoppingBagService: ShoppingBagService) { }
 
 	ngOnInit() {
 

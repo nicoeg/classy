@@ -7,9 +7,9 @@ import { Slide } from '../../classes/slide'
 	styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
-	private active = 0
-	private amount = 0
-	private _theme = ''
+	public active = 0
+	public amount = 0
+	public _theme = ''
 
 	@Input() slides: Slide[]
 	@Input() autoplay = true
@@ -27,7 +27,7 @@ export class SliderComponent implements OnInit {
 		}
 	}
 
-	private initializeAutoplay() {
+	public initializeAutoplay() {
 		setInterval(() => {
 			this.amount += 1
 

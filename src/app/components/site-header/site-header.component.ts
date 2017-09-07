@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { ShoppingBagService } from '../../services/shopping-bag.service'
 
@@ -9,7 +9,9 @@ import { ShoppingBagService } from '../../services/shopping-bag.service'
 })
 export class SiteHeaderComponent {
 
-	constructor(private shoppingBagService: ShoppingBagService) { }
+	@Input() transparent = false
+
+	constructor(public shoppingBagService: ShoppingBagService) { }
 
 	openShoppingBag($event) {
 		$event.stopPropagation()

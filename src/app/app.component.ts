@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router }    from '@angular/router';
+import { Router, ResolveEnd } from '@angular/router';
 
 import { DataService } from './services/data.service'
 import { ShoppingBagService } from './services/shopping-bag.service'
@@ -12,12 +12,17 @@ import { ShoppingBagService } from './services/shopping-bag.service'
 export class AppComponent implements OnInit {
   title = 'app'
 
-  constructor(private dataService: DataService, private shoppingBagService: ShoppingBagService, private router: Router, private route: ActivatedRoute) {}
+  transparentHeader = false
+
+  constructor(private dataService: DataService, public shoppingBagService: ShoppingBagService, private router: Router) {}
 
   ngOnInit() {
-    this.router.events.subscribe(() => {
+    this.router.events.subscribe(event => {
+      if (event instanceof ResolveEnd) {
+        this.transparentHeader = event.state.root.firstChild.data.transparentHeader || false
+      }
       window.scrollTo(0, 0);
+
     });
-  	console.log(this.route.snapshot.data);
   }
 }

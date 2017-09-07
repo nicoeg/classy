@@ -9,9 +9,6 @@ const routes: Routes = [
   {
     path: 'product/:id',
     component: ProductpageComponent,
-    data: {
-      transparentHeader: 'true'
-    }
   },
   {
     path: 'new-collection',
@@ -24,7 +21,7 @@ const routes: Routes = [
     path: '',
     component: FrontpageComponent,
     data: {
-      transparentHeader: 'true'
+      transparentHeader: true
     }
   }
 ];

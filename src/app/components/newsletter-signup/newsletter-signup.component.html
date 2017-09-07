@@ -1,5 +1,5 @@
 <div *ngIf="!signedUp" class="newsletter-signup" [ngClass]="{'newsletter-signup--fullwidth': theme === 'fullwidth'}">
-	<img class="newsletter-signup__icon" src="/assets/gfx/newsletter.png">
+	<img class="newsletter-signup__icon" src="./assets/gfx/newsletter.png">
 	<h1 class="newsletter-signup__title">Get our newsletter</h1>
 	<h2 class="newsletter-signup__subtitle">join our maillist to receive special discounts</h2>
 	<input class="newsletter-signup__input" placeholder="Enter your email" [ngClass]="{'newsletter-signup__input--error': error}" [(ngModel)]="email" (keyup)="error = false">

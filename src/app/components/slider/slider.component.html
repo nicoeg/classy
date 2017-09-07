@@ -1,4 +1,4 @@
-<div class="slider">
+<div class="slider" [ngClass]="_theme">
 	<div class="slider__arrow" (click)="previousSlide()"></div>
 
 	<div class="slider_slides">
@@ -8,11 +8,11 @@
 		</div>
 	</div>
 
-	<div class="slider__indicator indicator">
+	<div *ngIf="indicator" class="slider__indicator indicator">
 		<div *ngFor="let slide of slides; let key = index" (click)="changeSlide(key)" class="indicator__pin" [ngClass]="{'indicator__pin--active': key === active}"></div>
 	</div>
 
-	<div class="timer">
+	<div *ngIf="autoplay" class="timer">
 		<div class="timer__indicator" [ngStyle]="{'width': amount + '%'}"></div>
 	</div>
 

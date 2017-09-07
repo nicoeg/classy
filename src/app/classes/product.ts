@@ -7,6 +7,7 @@ export class Product {
 	public colors: Array<string>
 	public sizes: Array<number>
 
+	public id: number
 	public price: number
 	public sales: number
 

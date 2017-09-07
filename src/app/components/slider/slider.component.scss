@@ -21,6 +21,10 @@
 		}
 	}
 
+	&--dark &__arrow {
+		background: url('/assets/gfx/arrow-dark.png');
+	}
+
 	&__indicator {
 		position: absolute;
 		display: flex;

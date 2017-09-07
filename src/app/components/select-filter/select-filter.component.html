@@ -1,4 +1,4 @@
-<div class="select-filter" [ngClass]="{'select-filter--active': open}" (click)="open = !open">
+<div class="select-filter" [ngClass]="_theme + (open ? ' select-filter--active' : '')" (click)="open = !open">
 	<span class="select-filter__title">
 		<span *ngIf="active === null">{{ title }}</span>
 		<span *ngIf="active !== null">{{ active }}</span>

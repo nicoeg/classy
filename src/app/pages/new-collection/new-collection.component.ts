@@ -13,7 +13,12 @@ export class NewCollectionComponent implements OnInit {
 
 	get productsFiltered(): Product[] {
 		let products = this.products
-		//Apply filters
+
+		if (this.filters.price === '< 100') {
+			products = products.filter(product => product.price < 100)
+		}else if (this.filters.price === '> 100') {
+			products = products.filter(product => product.price > 100)
+		}
 
 		return products
 	}
@@ -24,7 +29,7 @@ export class NewCollectionComponent implements OnInit {
 		return this.productsFiltered.slice(max - this.perPage, max)
 	}
 
-	get pages() {
+	get pages(): Array<number> {
 		const keys = Array(Math.ceil(this.productsFiltered.length / this.perPage)).keys()
 
 		return [...Array.from(keys)].map(value => value + 1)
@@ -33,6 +38,9 @@ export class NewCollectionComponent implements OnInit {
 	currentPage = 1
 	perPage = 12
 
+	filters = {
+		price: null
+	}
 
 	constructor(private productService: ProductService) { }
 
@@ -52,5 +60,9 @@ export class NewCollectionComponent implements OnInit {
 				this.products = this.productService.getProducts()
 				break
 		}
+	}
+
+	priceChanged(price: string|null) {
+		this.filters.price = price
 	}
 }

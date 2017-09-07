@@ -10,10 +10,15 @@ export class SelectFilterComponent implements OnInit {
 
 	@Input() options: Array<string>
 
+	@Input()
+	set theme(theme: string) {
+		this._theme = 'select-filter--' + theme
+	}
+
 	@Output() onChanged = new EventEmitter<string|null>()
 
+	_theme = ''
 	open = false
-
 	active = null
 
 	constructor() { }

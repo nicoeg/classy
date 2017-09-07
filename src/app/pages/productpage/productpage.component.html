@@ -1,5 +1,143 @@
-<p>
-  Din far
-</p>
+<div class="promo">
+	<img src="/assets/gfx/50offsummer.png">
+</div>
 
-<h1 *ngFor="let product of products">{{ product.name }}</h1>
+<div class="product container">
+	<div class="image-carousel">
+		<div class="image-carousel__thumbnails">
+			<img *ngFor="let image of product.images; let key = index" (click)="slider.changeSlide(key)" [src]="image" [alt]="product.name" class="image-carousel__thumbnail">
+		</div>
+
+		<div class="image-carousel__big-image">
+			<div class="image-carousel__like round-buttton">
+				<i class="round-button__icon fa fa-heart" aria-hidden="true"></i>
+			</div>
+
+			<slider #slider
+					[autoplay]="false"
+					[indicator]="false"
+					[slides]="images"
+					theme="dark"></slider>
+		</div>
+	</div>
+
+	<div class="product-info">
+		<h1 class="product-info__title">{{ product.name }}</h1>
+
+		<div class="product-info__details">
+			<div class="product-info__price">${{ product.price }}</div>
+
+			<div class="product-info__shipping">
+				<i class="fa fa-globe"></i>
+				Free Shipping Worldwide
+			</div>
+		</div>
+
+		<select-filter class="product-info__dropdown" theme="classic" title="Select color" [options]="product.colors"></select-filter>
+
+		<div class="product-info__size">
+			<select-filter class="product-info__dropdown" theme="classic" title="Select size" [options]="product.sizes"></select-filter>
+
+			<div class="button">
+				<img class="button__icon" src="/assets/gfx/icons/measure.png">
+				Size Guide
+			</div>
+		</div>
+
+		<div class="product-info__buy button button--turqoise button--big">
+			<i class="button__icon fa fa-shopping-bag"></i>
+			Add To Bag
+		</div>
+
+		<div class="product-info__save">
+			<div class="save button">Save for later</div>
+
+			<div class="share button button--transparent">
+				<i class="button__icon fa fa-share-alt"></i>
+				Share this product
+			</div>
+		</div>
+
+		<div class="tabs">
+			<div class="tabs__header">
+				<div *ngFor="let text of tabs" class="tabs__tab" [ngClass]="{'tabs__tab--active': text === activeTab}" (click)="setTab(text)">{{ text }}</div>
+			</div>
+
+			<div class="tabs__content">{{ product.texts[activeTab] }}</div>
+		</div>
+	</div>
+</div>
+
+<div class="description">
+	<h1 class="description__title">Sharpen Your Look</h1>
+
+	<div class="description__divider"></div>
+
+	<div class="description__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+</div>
+
+<div class="feature">
+	<div class="feature__image">
+		<img src="/assets/gfx/featuredimage1.png" alt="Elegant Style">
+	</div>
+
+	<div class="feature__body">
+		<h2 class="feature__title">Extraordinary Design</h2>
+
+		<div class="feature__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+
+		<div class="feature__icons">
+			<div class="round-button round-button--elegant">
+				<img src="/assets/gfx/elegantstyle1.png" class="round-button__icon">
+				<span class="round-button__text">Elegant Style</span>
+			</div>
+
+			<div class="round-button round-button--elegant">
+				<img src="/assets/gfx/elegantstyle2.png" class="round-button__icon">
+				<span class="round-button__text">Elegant Style</span>
+			</div>
+
+			<div class="round-button round-button--elegant">
+				<img src="/assets/gfx/elegantstyle3.png" class="round-button__icon">
+				<span class="round-button__text">Elegant Style</span>
+			</div>
+		</div>
+
+		<div class="feature__button outline-button">Read More</div>
+	</div>
+</div>
+
+<div class="feature feature--even">
+	<div class="feature__image">
+		<img src="/assets/gfx/featuredimage2.png" alt="Elegant Style">
+	</div>
+
+	<div class="feature__body">
+		<h2 class="feature__title">Extraordinary Design</h2>
+
+		<div class="feature__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+
+		<div class="feature__icons">
+			<div class="round-button round-button--elegant">
+				<img src="/assets/gfx/elegantstyle1.png" class="round-button__icon">
+				<span class="round-button__text">Elegant Style</span>
+			</div>
+
+			<div class="round-button round-button--elegant">
+				<img src="/assets/gfx/elegantstyle2.png" class="round-button__icon">
+				<span class="round-button__text">Elegant Style</span>
+			</div>
+
+			<div class="round-button round-button--elegant">
+				<img src="/assets/gfx/elegantstyle3.png" class="round-button__icon">
+				<span class="round-button__text">Elegant Style</span>
+			</div>
+		</div>
+
+		<div class="feature__button outline-button">Read More</div>
+	</div>
+</div>
+
+<div class="promo">
+	<img src="/assets/gfx/bigdiscounts.png">
+</div>

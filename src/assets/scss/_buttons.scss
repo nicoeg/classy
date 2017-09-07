@@ -1,5 +1,57 @@
 @import '~assets/scss/variables';
 
+.button {
+	display: flex;
+	background: #eee;
+	padding: 15px 20px;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background .3s;
+	user-select: none;
+
+	&:hover {
+		background: lighten(#eee, 2%);
+	}
+
+	&:active {
+		background: darken(#eee, 10%);
+	}
+
+	&--turqoise {
+		background: $turqoise;
+		color: #fff;
+	}
+
+	&--big {
+		width: 100%;
+		padding: 20px 0;
+		text-transform: uppercase;
+		font-size: 16px;
+	}
+
+	&--turqoise:hover {
+		background: lighten($turqoise, 2%);
+	}
+
+	&--turqoise:active {
+		background: darken($turqoise, 10%);
+	}
+
+	&--transparent {
+		background: transparent;
+	}
+
+	&__icon {
+		margin-right: 10px;
+	}
+
+	&--turqoise &__icon {
+		color: #fff;
+	}
+}
+
 .outline-button {
 	padding: 25px 40px;
 	border: 1px solid #fff;
@@ -9,6 +61,12 @@
 	display: flex;
     align-items: center;
     justify-content: center;
+    transition: border-color .2s;
+    user-select: none;
+
+	&:active {
+		border-color: darken(#fff, 10%);
+	}
 
     &__icon {
     	color: #58595c;
@@ -26,6 +84,7 @@
 	flex-direction: column;
     align-items: center;
     cursor: pointer;
+    user-select: none;
 
 	&__icon {
 		font-size: 15px;
@@ -35,10 +94,19 @@
 		color: #fff;
 	}
 
+    &--elegant &__icon {
+    	background: none;
+    	border: 1px solid #fff;
+    }
+
 	&__text {
 		margin-top: 10px;
 		font-weight: 300;
 		font-size: 13px;
 		text-align: center;
+	}
+
+	&--elegant &__text {
+		color: #fff;
 	}
 }

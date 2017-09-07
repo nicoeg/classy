@@ -7,7 +7,7 @@ import { ProductpageComponent } from './pages/productpage/productpage.component'
 
 const routes: Routes = [
   {
-    path: 'product',
+    path: 'product/:id',
     component: ProductpageComponent,
     data: {
       transparentHeader: 'true'

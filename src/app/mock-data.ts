@@ -2,6 +2,7 @@ import { Slide } from './classes/slide'
 
 export const productData = [
    {
+      "id": 1,
       "name": "Crochet Back Playsuit",
       "brand": "Pull&Bear",
       "price": 47.10,
@@ -20,6 +21,7 @@ export const productData = [
       "sizes": [27, 28, 29]
    },
    {
+      "id": 2,
       "name": "Aztec Printed Jumpsuit",
       "brand": "Pull&Bear",
       "price": 54,
@@ -38,6 +40,7 @@ export const productData = [
       "sizes": [27, 28, 29]
    },
    {
+      "id": 3,
       "name": "Utility Detail Playsuit",
       "brand": "Pull&Bear",
       "price": 31.45,
@@ -56,6 +59,7 @@ export const productData = [
       "sizes": [27, 28, 29]
    },
    {
+      "id": 4,
       "name": "Denim Jacket",
       "brand": "Pull&Bear",
       "price": 77.87,
@@ -74,6 +78,7 @@ export const productData = [
       "sizes": [27, 28, 29]
    },
    {
+      "id": 5,
       "name":"Utility Detail Playsuit",
       "brand":"Pull&Bear",
       "price":101.9,
@@ -106,6 +111,7 @@ export const productData = [
       ]
    },
    {
+      "id": 6,
       "name":"Aztec Printed Jumpsuit",
       "brand":"Michael Kors",
       "price":126,
@@ -138,6 +144,7 @@ export const productData = [
       ]
    },
    {
+      "id": 7,
       "name":"Aztec Printed Jumpsuit",
       "brand":"Pull&Bear",
       "price":97.6,
@@ -170,6 +177,7 @@ export const productData = [
       ]
    },
    {
+      "id": 8,
       "name":"Aztec Printed Jumpsuit",
       "brand":"Pull&Bear",
       "price":132.2,
@@ -202,6 +210,7 @@ export const productData = [
       ]
    },
    {
+      "id": 9,
       "name":"Crochet Back Playsuit",
       "brand":"Pull&Bear",
       "price":122.9,
@@ -234,6 +243,7 @@ export const productData = [
       ]
    },
    {
+      "id": 10,
       "name":"Aztec Printed Jumpsuit",
       "brand":"Mango",
       "price":132.6,
@@ -266,6 +276,7 @@ export const productData = [
       ]
    },
    {
+      "id": 11,
       "name":"Denim Jacket",
       "brand":"MissGuided",
       "price":95.2,
@@ -298,6 +309,7 @@ export const productData = [
       ]
    },
    {
+      "id": 12,
       "name":"Utility Detail Playsuit",
       "brand":"Monki",
       "price":75.8,
@@ -330,6 +342,7 @@ export const productData = [
       ]
    },
    {
+      "id": 13,
       "name":"Aztec Printed Jumpsuit",
       "brand":"Monki",
       "price":126.5,
@@ -362,6 +375,7 @@ export const productData = [
       ]
    },
    {
+      "id": 14,
       "name":"Utility Detail Playsuit",
       "brand":"Pull&Bear",
       "price":88.8,
@@ -394,6 +408,7 @@ export const productData = [
       ]
    },
    {
+      "id": 15,
       "name":"Aztec Printed Jumpsuit",
       "brand":"Michael Kors",
       "price":144.1,
@@ -426,6 +441,7 @@ export const productData = [
       ]
    },
    {
+      "id": 16,
       "name":"Aztec Printed Jumpsuit",
       "brand":"Pull&Bear",
       "price":129.5,
@@ -458,6 +474,7 @@ export const productData = [
       ]
    },
    {
+      "id": 17,
       "name":"Aztec Printed Jumpsuit",
       "brand":"Monki",
       "price":147.1,
@@ -490,6 +507,7 @@ export const productData = [
       ]
    },
    {
+      "id": 18,
       "name":"Crochet Back Playsuit",
       "brand":"MissGuided",
       "price":75.7,
@@ -522,6 +540,7 @@ export const productData = [
       ]
    },
    {
+      "id": 19,
       "name":"Crochet Back Playsuit",
       "brand":"MissGuided",
       "price":89,
@@ -554,6 +573,7 @@ export const productData = [
       ]
    },
    {
+      "id": 20,
       "name":"Crochet Back Playsuit",
       "brand":"Pull&Bear",
       "price":73.2,
@@ -586,6 +606,7 @@ export const productData = [
       ]
    },
    {
+      "id": 21,
       "name":"Aztec Printed Jumpsuit",
       "brand":"Pull&Bear",
       "price":104.1,
@@ -618,6 +639,7 @@ export const productData = [
       ]
    },
    {
+      "id": 22,
       "name":"Crochet Back Playsuit",
       "brand":"Mango",
       "price":81.2,
@@ -650,6 +672,7 @@ export const productData = [
       ]
    },
    {
+      "id": 23,
       "name":"Utility Detail Playsuit",
       "brand":"Pull&Bear",
       "price":124.3,
@@ -682,6 +705,7 @@ export const productData = [
       ]
    },
    {
+      "id": 24,
       "name":"Crochet Back Playsuit",
       "brand":"Pull&Bear",
       "price":77,
@@ -714,6 +738,7 @@ export const productData = [
       ]
    },
    {
+      "id": 25,
       "name":"Aztec Printed Jumpsuit",
       "brand":"Mango",
       "price":135.9,

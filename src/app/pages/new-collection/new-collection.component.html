@@ -18,7 +18,7 @@
 
 		<select-filter class="collection__filter" title="Color" [options]="['red', 'white', 'blue']"></select-filter>
 
-		<select-filter class="collection__filter" title="Price" [options]="['< 500', '> 500']"></select-filter>
+		<select-filter class="collection__filter" title="Price" [options]="['< 100', '> 100']" (onChanged)="priceChanged($event)"></select-filter>
 	</div>
 
 	<product-grid [products]="currentProducts"></product-grid>
@@ -27,3 +27,5 @@
 		<div class="pages__number" [ngClass]="{'pages__number--active': page === currentPage}" (click)="currentPage = page" *ngFor="let page of pages">{{ page }}</div>
 	</div>
 </div>
+
+<newsletter-signup theme="fullwidth"></newsletter-signup>

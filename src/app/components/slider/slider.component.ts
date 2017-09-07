@@ -7,14 +7,27 @@ import { Slide } from '../../classes/slide'
 	styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
-	active = 0
-	amount = 0
+	private active = 0
+	private amount = 0
+	private _theme = ''
 
 	@Input() slides: Slide[]
+	@Input() autoplay = true
+	@Input() indicator = true
+	@Input()
+	set theme(theme: string) {
+		this._theme = 'slider--' + theme
+	}
 
 	constructor() { }
 
 	ngOnInit() {
+		if (this.autoplay) {
+			this.initializeAutoplay()
+		}
+	}
+
+	private initializeAutoplay() {
 		setInterval(() => {
 			this.amount += 1
 
@@ -23,7 +36,6 @@ export class SliderComponent implements OnInit {
 				this.amount = 0
 			}
 		}, 100)
-
 	}
 
 	changeSlide(slideIndex) {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'newsletter-signup',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./newsletter-signup.component.scss']
 })
 export class NewsletterSignupComponent implements OnInit {
+	@Input() theme: string
+
 	error = false
 	signedUp = false
 

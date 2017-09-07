@@ -5,9 +5,9 @@ import { Slide } from '../classes/slide'
 @Injectable()
 export class DataService {
 
-  constructor() { }
+	constructor() { }
 
-  getSlides(): Slide[] {
-  	return slideData
-  }
+	getSlides(): Slide[] {
+		return slideData
+	}
 }

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'
 
 import { DataService } from './services/data.service'
 import { ProductService } from './services/product.service'
+import { ShoppingBagService } from './services/shopping-bag.service'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { ProductGridComponent } from './components/product-grid/product-grid.com
 import { FooterComponent } from './components/footer/footer.component';
 import { NewCollectionComponent } from './pages/new-collection/new-collection.component';
 import { SelectFilterComponent } from './components/select-filter/select-filter.component';
+import { ShoppingBagComponent } from './components/shopping-bag/shopping-bag.component';
 
 @NgModule({
   declarations: [
@@ -33,13 +35,14 @@ import { SelectFilterComponent } from './components/select-filter/select-filter.
     FooterComponent,
     NewCollectionComponent,
     SelectFilterComponent,
+    ShoppingBagComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [ DataService, ProductService ],
+  providers: [ DataService, ProductService, ShoppingBagService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

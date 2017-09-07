@@ -1,4 +1,4 @@
-<div class="promo">
+<div [routerLink]="'/new-collection'" class="promo">
 	<img src="/assets/gfx/50offsummer.png">
 </div>
 
@@ -33,10 +33,10 @@
 			</div>
 		</div>
 
-		<select-filter class="product-info__dropdown" theme="classic" title="Select color" [options]="product.colors"></select-filter>
+		<select-filter class="product-info__dropdown" theme="classic" title="Select color" [options]="product.colors" (onChanged)="color = $event"></select-filter>
 
 		<div class="product-info__size">
-			<select-filter class="product-info__dropdown" theme="classic" title="Select size" [options]="product.sizes"></select-filter>
+			<select-filter class="product-info__dropdown" theme="classic" title="Select size" [options]="product.sizes" (onChanged)="size = $event"></select-filter>
 
 			<div class="button">
 				<img class="button__icon" src="/assets/gfx/icons/measure.png">
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 
-		<div class="product-info__buy button button--turqoise button--big">
+		<div class="product-info__buy button button--turqoise button--big" (click)="addToBasket()">
 			<i class="button__icon fa fa-shopping-bag"></i>
 			Add To Bag
 		</div>
@@ -138,6 +138,6 @@
 	</div>
 </div>
 
-<div class="promo">
+<div [routerLink]="'/new-collection'" class="promo">
 	<img src="/assets/gfx/bigdiscounts.png">
 </div>

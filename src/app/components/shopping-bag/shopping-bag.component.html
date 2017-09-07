@@ -1,0 +1,35 @@
+<div class="shopping-bag" [ngClass]="{'shopping-bag--open': shoppingBagService.shoppingBagOpen}">
+	<div class="shopping-bag__header">
+		<i class="fa fa-shopping-bag"></i>
+		Shopping Bag
+	</div>
+
+	<div class="shopping-bag__items">
+		<div *ngFor="let item of shoppingBagService.items; let key = index" class="product">
+			<div class="product__remove" (click)="shoppingBagService.removeItem(key)">x</div>
+
+			<a href="#" class="product__image">
+				<img [src]="item.product.thumbnail" [alt]="item.product.name">
+			</a>
+
+			<div class="product__info">
+				<div class="product__price">${{ item.product.price }}</div>
+				<div class="product__name">{{ item.product.name }}</div>
+				<div class="product__details">
+					Qty {{ item.preferences.quantity }} • Color {{ item.preferences.color }} • Size {{ item.preferences.size }}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="shopping-bag__total">
+		<div class="shopping-bag__subtotal">Subtotal</div>
+		<span class="shopping-bag__notice">(Before delivery charges)</span>
+
+		<div class="shopping-bag__price">${{ totalPrice }}</div>
+	</div>
+
+	<div class="shopping-bag__buy button button--big button--turqoise">Checkout</div>
+
+	<div class="button button--big">Continue Shopping</div>
+</div>

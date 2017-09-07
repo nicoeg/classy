@@ -4,6 +4,7 @@ import 'rxjs/add/operator/switchMap';
 
 import { Product } from '../../classes/product'
 import { ProductService } from '../../services/product.service'
+import { ShoppingBagService } from '../../services/shopping-bag.service'
 
 @Component({
 	selector: 'app-product',
@@ -12,6 +13,9 @@ import { ProductService } from '../../services/product.service'
 })
 export class ProductpageComponent implements OnInit {
 	product = null
+
+	color: string
+	size: number
 
 	get tabs() {
 		return Object.keys(this.product.texts)
@@ -23,7 +27,7 @@ export class ProductpageComponent implements OnInit {
 
 	activeTab: string
 
-	constructor(private route: ActivatedRoute, private productService: ProductService) { }
+	constructor(private route: ActivatedRoute, private productService: ProductService, private shopppingBagService: ShoppingBagService) { }
 
 	ngOnInit() {
 		let id = this.route.snapshot.paramMap.get('id')
@@ -34,5 +38,15 @@ export class ProductpageComponent implements OnInit {
 
 	setTab(tab) {
 		this.activeTab = tab
+	}
+
+	addToBasket() {
+		if (!this.color || !this.size) {
+			alert('Please choose color and size')
+		}
+
+		let { product, color, size } = this
+
+		this.shopppingBagService.addItem(product, { color, size })
 	}
 }

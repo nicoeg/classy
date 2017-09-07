@@ -10,9 +10,9 @@
 			<img class="nav-link__icon" src="/assets/gfx/icons/login.png" alt="Login">
 			<span class="nav-link__text">Login</span>
 		</a>
-		<a class="nav-link" href="#">
+		<a class="nav-link" (click)="openShoppingBag($event)">
 			<img class="nav-link__icon" src="/assets/gfx/icons/shoppingbag.png" alt="Shopping bag">
-			<span class="nav-link__text">3 items</span>
+			<span class="nav-link__text">{{ shoppingBagService.items.length }} items</span>
 		</a>
 		<a class="nav-link" href="#">
 			<img class="nav-link__icon" src="/assets/gfx/icons/search.png" alt="Search">

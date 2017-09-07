@@ -1,7 +1,7 @@
 <div class="product">
 	<div *ngIf="product.sale" class="product__sale-badge">Sale</div>
 
-	<div class="product__image">
+	<a [routerLink]="'/product/' + product.id" class="product__image">
 		<img [src]="product.thumbnail">
 
 		<div class="product__actions">
@@ -15,13 +15,13 @@
 				<span class="round-button__text">Save</span>
 			</div>
 		</div>
-	</div>
+	</a>
 
 	<div class="product__name">{{ product.brand }} {{ product.name }}</div>
 
 	<div class="product__bottom">
 		<div class="product__price">${{ product.price }}</div>
-		<div class="product__button outline-button outline-button--dark">
+		<div [routerLink]="'/product/' + product.id" routerLink class="product__button outline-button outline-button--dark">
 			<i class="outline-button__icon fa fa-shopping-bag"></i>
 			Add to bag
 		</div>

@@ -21,7 +21,9 @@ export class SelectFilterComponent implements OnInit {
 	open = false
 	active = null
 
-	constructor() { }
+	constructor() {
+		this.hide = this.hide.bind(this)
+	}
 
 	ngOnInit() { }
 
@@ -29,5 +31,9 @@ export class SelectFilterComponent implements OnInit {
 		this.active = option
 
 		this.onChanged.emit(this.active)
+	}
+
+	public hide() {
+		this.open = false
 	}
 }

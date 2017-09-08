@@ -22,6 +22,7 @@ import { NewCollectionComponent } from './pages/new-collection/new-collection.co
 import { SelectFilterComponent } from './components/select-filter/select-filter.component';
 import { ShoppingBagComponent } from './components/shopping-bag/shopping-bag.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     SelectFilterComponent,
     ShoppingBagComponent,
     ContactComponent,
+    ClickOutsideDirective,
   ],
   imports: [
     BrowserModule,

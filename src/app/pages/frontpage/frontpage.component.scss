@@ -213,6 +213,10 @@
 }
 
 @include break(500) {
+	.slider {
+		display: none;
+	}
+
 	.promotions {
 		grid-template-columns: 100%;
 		grid-gap: 10px 0;
